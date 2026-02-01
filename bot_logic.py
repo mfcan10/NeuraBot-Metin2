@@ -123,7 +123,7 @@ class MetinBot:
     def interception_click(self, screen_x, screen_y):
         try:
             win32gui.SetForegroundWindow(self.target_hwnd)
-            time.sleep(0.1)
+            time.sleep(np.random.uniform(0.08, 0.12))
             pydirectinput.moveTo(screen_x, screen_y)
             time.sleep(0.1)
             
@@ -143,7 +143,7 @@ class MetinBot:
         # Scancode 0x2C is 'Z'
         if self.driver and self.keyboard_device:
             self.driver.send(self.keyboard_device, KeyStroke(0x2C, 0)) # Down (State 0)
-            time.sleep(0.05)
+            time.sleep(np.random.uniform(0.04, 0.09))
             self.driver.send(self.keyboard_device, KeyStroke(0x2C, 1)) # Up (State 1)
         else:
             pydirectinput.press('z')
@@ -154,7 +154,7 @@ class MetinBot:
         self.log("Looting...")
         for _ in range(4):
             self.hit_z_key()
-            time.sleep(0.1)
+            time.sleep(np.random.uniform(0.1, 0.2))
 
     def check_health_bar(self, frame):
         height, width = frame.shape[:2]

@@ -1,0 +1,10 @@
+ultralytics
+opencv-python
+mss
+numpy<2.0
+pywin32
+keyboard
+pydirectinput
+pyinstaller
+customtkinter
+interception-python

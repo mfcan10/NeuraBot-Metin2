@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# PyInstaller
+*.spec
+build/
+dist/
+*.manifest
+
+# VS Code
+.vscode/
+
+# Local Assets (Optional, usually we exclude large models but for this repo we might want it)
+# models/ 
+
+# OS
+Thumbs.db
+Desktop.ini

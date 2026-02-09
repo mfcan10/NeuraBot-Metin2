@@ -94,6 +94,11 @@ class MetinApp(ctk.CTk):
     def _append_log(self, message):
         self.log_box.configure(state="normal")
         self.log_box.insert("end", message + "\n")
+        
+        # Limit log size to prevent memory leak
+        if float(self.log_box.index("end")) > 1000:
+            self.log_box.delete("1.0", "2.0")
+            
         self.log_box.see("end")
         self.log_box.configure(state="disabled")
 

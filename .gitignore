@@ -20,7 +20,7 @@ dist/
 # VS Code
 .vscode/
 
-# Local Assets (Optional, usually we exclude large models but for this repo we might want it)
+# Local Assets 
 # models/ 
 
 # OS

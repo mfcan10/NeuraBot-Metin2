@@ -382,6 +382,9 @@ class MetinBot:
             except Exception as e:
                 self.log(f"Loop Error: {e}")
                 time.sleep(1)
+            
+            # Reduce CPU usage
+            time.sleep(0.05)
 
         self.log("Bot Stopped.")
         cv2.destroyAllWindows()
